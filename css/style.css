@@ -1,0 +1,98 @@
+/* 
+* Author: Hasan
+* Github: https://github.com/hasanrafi69
+* Email: hasanrafi69@gmail.com
+* Mobile: +880-161-782323
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+
+/* <!--========================
+    |       Header Part         |
+    =========================--> */
+
+.mega-menu {
+    display: none;
+    left: 0;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+}
+
+
+/* #hoverable Class Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.hoverable {
+    position: static;
+}
+
+.hoverable>a:after {
+    content: "\25BC";
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+}
+
+.hoverable:hover .mega-menu {
+    display: block;
+}
+
+
+/* #toggle Class Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.toggleable>label:after {
+    content: "\25BC";
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+}
+
+.toggle-input {
+    display: none;
+}
+
+.toggle-input:not(checked)~.mega-menu {
+    display: none;
+}
+
+.toggle-input:checked~.mega-menu {
+    display: block;
+}
+
+.toggle-input:checked+label {
+    color: white;
+    background: #2c5282;
+    /*@apply bg-blue-800 */
+}
+
+.toggle-input:checked~label:after {
+    content: "\25B2";
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+}
+
+
+/* ===============Footer================= */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
