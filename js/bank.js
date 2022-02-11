@@ -34,6 +34,7 @@ document.getElementById('withdraw-button').addEventListener('click', function() 
     const withdrawInput = document.getElementById('withdraw-input');
     const withdrawTotal = document.getElementById('withdraw-total');
     const balanceTotal = document.getElementById('balance-total');
+    document.getElementsByClassName
 
     // get the amount withdraw
     const withdrawInputText = withdrawInput.value;
