@@ -22,6 +22,12 @@ body {
     |       Header Part         |
     =========================--> */
 
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
 .mega-menu {
     display: none;
     left: 0;
