@@ -10,7 +10,7 @@
         <!-- tailwind 3.0.15 -->
         <script src="js/tailwind.min.js"></script>
         <!-- fontawesome 5.10 -->
-        <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" /> -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
         <!-- main Style -->
         <link rel="stylesheet" href="css/style.css">
         <!-- responsive  -->
@@ -31,10 +31,10 @@
                             <a href="home.html" class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base hover:font-bold">Home</a>
                         </li>
                         <li class="text-white hover:bg-blue-800">
-                            <a href="#" class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base hover:font-bold">About</a>
+                            <a href="bank.html" class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base hover:font-bold">Baper Bank</a>
                         </li>
                         <li class="text-white hover:bg-blue-800">
-                            <a href="#" class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base hover:font-bold">Contact</a>
+                            <a href="calculator.html" class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base hover:font-bold">Calculator</a>
                         </li>
                         <li class="text-white hover:bg-blue-800">
                             <a href="#" class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base hover:font-bold" id="logout">Logout</a>
@@ -49,29 +49,26 @@
             <!--========================
             |      Deposit Part         |
             =========================-->
-            <section class="w-3/4 mx-auto">
+            <section class="lg:w-3/4 mx-auto" id="baperbank">
+                <div class="lg:text-5xl text-center my-2 pt-2">
+                    <h1 class="font-semibold">My <span class="font-semibold text-purple-600">BAPER-BANK!!!</h1>
+                </div>
                 <div class="grid grid-cols-3 text-white gap-4">
                     <div class="bg-blue-300 p-8 rounded">
                         <h3 class="text-2xl">Deposit</h3>
-                        <h4 class="text-4xl">$<span id="deposit-total">00</span> </h4>
+                        <h4 class="text-4xl">$<span id="deposit-total">00</h4>
                     </div>
                     <div class="bg-green-300 p-8 rounded">
                         <h3 class="text-2xl">Withdraw</h3>
-                        <h4 class="text-4xl">$<span id="withdraw-total">00</span></h4>
+                        <h4 class="text-4xl">$<span id="withdraw-total">00</h4>
                     </div>
                     <div class="bg-yellow-300 p-8 rounded">
                         <h3 class="text-2xl">Balance</h3>
-                        <h4 class="text-4xl">$<span id="balance-total">00</span></h4>
+                        <h4 class="text-4xl">$<span id="balance-total">00</h4>
                     </div>
                 </div>
-            </section>
-            <!-- end deposit -->
-
-            <!--========================
-            |       Withdraw Part         |
-            =========================-->
-            <section class="w-3/4 mx-auto my-4">
-                <div class="grid grid-cols-2 gap-4">
+                <!-- Display part -->
+                <div class="grid grid-cols-2 gap-4 pt-4">
                     <div class="bg-red-100 p-8 rounded">
                         <h3 class="text-2xl uppercase pb-2">Please Deposit</h3>
                         <div>
@@ -87,8 +84,9 @@
                         </div>
                     </div>
                 </div>
+                <!-- Update Part -->
             </section>
-            <!-- end withdraw -->
+            <!-- end deposit -->
 
         </main>
         <!-- end main -->
