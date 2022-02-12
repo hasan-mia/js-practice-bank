@@ -27,11 +27,11 @@ function totalMoney(total, withdrawInput) {
     const totalBalanceText = totalValue.innerText;
     const totalBalanceNumber = parseFloat(totalBalanceText);
     const totalCurrentBalance = totalBalanceNumber + withdrawInput;
-    if (totalCurrentBalance > 0 && totalCurrentBalance > withdrawInput) {
-        totalValue.innerText = totalCurrentBalance
-    } else {
+    if (totalCurrentBalance <= 0 && totalCurrentBalance < withdrawInput) {
         const errorMessage = document.getElementById('error');
         errorMessage.innerText = 'You dont have enough balance';
+    } else {
+        totalValue.innerText = totalCurrentBalance
     }
 }
 
