@@ -1,54 +1,47 @@
-/* 
- * Author: Hasan
- * Github: https://github.com/hasanrafi69
- * Email: hasanrafi69@gmail.com
- * Mobile: +880-161-782323
- */
+// /* 
+//  * Author: Hasan
+//  * Github: https://github.com/hasanrafi69
+//  * Email: hasanrafi69@gmail.com
+//  * Mobile: +880-161-782323
+//  */
+// // ===============Deposit with function=============
 
 
-// ===============Deposit Control=============
-document.getElementById('deposit-button').addEventListener('click', function() {
-    const depositInput = document.getElementById('deposit-input');
-    const depositTotal = document.getElementById('deposit-total');
-    const balanceTotal = document.getElementById('balance-total');
 
-    // get the amount deposited
-    const depositInputText = depositInput.value;
-    const depositInputAmount = parseFloat(depositInputText);
+// // ===============Deposit without function=============
+const depositBtn = document.getElementById('deposit-button');
+depositBtn.addEventListener('click', function() {
+    const inputValue = document.getElementById('deposit-input')
+    const inValueText = inputValue.value;
+    const inputAmmountNumber = parseFloat(inValueText);
+    const depositValue = document.getElementById('deposit-total');
+    const depositValueTxt = depositValue.innerText;
+    const depositAmountNumber = parseFloat(depositValueTxt);
+    const totalInput = inputAmmountNumber + depositAmountNumber;
+    depositValue.innerText = totalInput; // Total Deposite
+    const totalBalance = document.getElementById('balance-total');
+    const totalBalanceText = totalBalance.innerText;
+    const totalBalanceNumber = parseFloat(totalBalanceText);
+    const totalCurrent = totalBalanceNumber + totalInput;
+    totalBalance.innerText = totalCurrent; // Total Blance
+    inputValue.value = '';
 
-    // update deposit total
-    const depositTotalText = depositTotal.innerText;
-    const depositTotalAmout = parseFloat(depositTotalText) + depositInputAmount;
-    depositTotal.innerText = depositTotalAmout;
+})
 
-    // total balance
-    const balanceTotalText = balanceTotal.innerText;
-    const balanceTotalAmount = parseFloat(balanceTotalText) + depositInputAmount;
-    balanceTotal.innerText = balanceTotalAmount;
-    // clear the deposit input field
-    depositInput.value = '';
-});
-
-// ===============Withdraw Control=============
-document.getElementById('withdraw-button').addEventListener('click', function() {
+const withdrawBtn = document.getElementById('withdraw-button');
+withdrawBtn.addEventListener('click', function() {
     const withdrawInput = document.getElementById('withdraw-input');
-    const withdrawTotal = document.getElementById('withdraw-total');
-    const balanceTotal = document.getElementById('balance-total');
-    document.getElementsByClassName
-
-    // get the amount withdraw
     const withdrawInputText = withdrawInput.value;
-    const withdrawInputAmount = parseFloat(withdrawInputText);
-
-    // update withdraw total
+    const withdrawInputNumber = parseFloat(withdrawInputText); // Get amount from withdraw button
+    const withdrawTotal = document.getElementById('withdraw-total');
     const withdrawTotalText = withdrawTotal.innerText;
-    const withdrawTotalAmout = parseFloat(withdrawTotalText) + withdrawInputAmount;
-    withdrawTotal.innerText = withdrawTotalAmout;
-
-    // total balance
-    const balanceTotalText = balanceTotal.innerText;
-    const balanceTotalAmount = parseFloat(balanceTotalText) - withdrawInputAmount;
-    balanceTotal.innerText = balanceTotalAmount;
-    // clear the withdraw field
+    const withdrawTotalNumber = parseFloat(withdrawTotalText); // current withdraw amount
+    const totalWithdraw = withdrawTotalNumber + withdrawInputNumber; // Total Withdraw
+    withdrawTotal.innerText = totalWithdraw; // Display Total Withdraw
+    const totalBalance = document.getElementById('balance-total'); // Total Balance
+    const totalBalanceText = totalBalance.innerText;
+    const totalBalanceNumber = parseFloat(totalBalanceText);
+    const totalCurrentBalance = totalBalanceNumber - withdrawInputNumber;
+    totalBalance.innerText = totalCurrentBalance; // Total Blance
     withdrawInput.value = '';
-});
+})
