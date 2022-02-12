@@ -39,7 +39,7 @@ function totalMoney(total, withdrawInput) {
 document.getElementById('deposit-button').addEventListener('click', function() {
     const depositAmmount = inputMoney('deposit-input');
     const errorMessage = document.getElementById('error');
-    if (depositAmmount > 0 && depositAmmount != "number") {
+    if (depositAmmount > 0 && depositAmmount != "string") {
         updateMoney('deposit-total', depositAmmount);
         totalMoney('balance-total', depositAmmount);
     } else if (depositAmmount < 0) {
@@ -53,7 +53,7 @@ document.getElementById('deposit-button').addEventListener('click', function() {
 document.getElementById('withdraw-button').addEventListener('click', function() {
     const withdrawInput = inputMoney('withdraw-input');
     const errorMessage = document.getElementById('error');
-    if (withdrawInput > 0 && withdrawInput != "number") {
+    if (withdrawInput > 0 && withdrawInput != "string ") {
         updateMoney('withdraw-total', withdrawInput)
         totalMoney('balance-total', -withdrawInput);
     } else if (withdrawInput < 0) {
