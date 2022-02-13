@@ -17,14 +17,5 @@ for (const button of allButton) {
         } else if (btnId == 'deeppink') {
             document.body.style.background = "deeppink";
         }
-
-        // console.log(btn);
     })
 }
-
-// document.getElementById('btn').addEventListener('click', function(e) {
-//     const btn = e.target;
-// });
-// document.getElementById('crimson').addEventListener('click', function() {
-//     document.body.style.background = "crimson";
-// });
