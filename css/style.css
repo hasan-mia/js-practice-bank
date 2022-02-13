@@ -110,6 +110,13 @@ header {
 }
 
 
+/* ============Cart====== */
+
+.item-img img {
+    height: 6rem;
+}
+
+
 /* ===============Footer================= */
 
 .footer {
