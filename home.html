@@ -35,6 +35,9 @@
                             <a href="#baperbank" class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base hover:font-bold">Baper Bank</a>
                         </li>
                         <li class="text-white hover:bg-blue-800">
+                            <a href="#pin-varify" class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base hover:font-bold">PinGenerator</a>
+                        </li>
+                        <li class="text-white hover:bg-blue-800">
                             <a href="#cart" class="relative block py-6 px-2 lg:p-6 text-sm lg:text-base hover:font-bold">Cart</a>
                         </li>
                         <li class="text-white hover:bg-blue-800">
@@ -94,6 +97,59 @@
                 </div>
             </section>
             <!-- end baper bank -->
+
+            <!--========================
+            |    Pin Varify Part       |
+            =========================-->
+            <section class="lg:w-4/4 px-14 py-10 mx-auto" id="pin-varify">
+                <div class="lg:text-5xl text-center mb-2">
+                    <h1 class="font-semibold">Varify <span class="font-semibold text-purple-600">Pin!!!</h1>
+                </div>
+                <div class="notify-section">
+                    <p class="notify">❌ Pin Didn't Match, Please try again</p>
+                    <p class="notify">✅ Pin Matched... Secret door is opening for you</p>
+                </div>
+                <div class="grid grid-cols-2 px-16 py-2 bg-gray-100 rounded">
+                    <div class="pin-generator half-width mx-2">
+                        <input class="form-control" type="text"><br>
+                        <button class="generate-btn">Generate Pin</button>
+                    </div>
+                    <div class="pin-calculator">
+                        <div class="input-section half-width">
+                            <input class="form-control" type="text">
+                            <div class="numbers">
+                                <div class="calc-body">
+                                    <div class="calc-button-row">
+                                      <div class="button">7</div>
+                                      <div class="button">8</div>
+                                      <div class="button">9</div>
+                                    </div>
+                                    <div class="calc-button-row">
+                                      <div class="button">4</div>
+                                      <div class="button">5</div>
+                                      <div class="button">6</div>
+                                    </div>
+                                    <div class="calc-button-row">
+                                      <div class="button">1</div>
+                                      <div class="button">2</div>
+                                      <div class="button">3</div>
+                                    </div>
+                                    <div class="calc-button-row">
+                                        <div class="button">&lt;</div>
+                                        <div class="button">0</div>
+                                        <div class="button">C</div>
+                                    </div>
+                                    <div>
+                                        <button type="submit" class="submit-btn text-xl px-28 py-2 uppercase bg-blue-500 rounded">Submit</button>
+                                        <p class="action-left">3 try left</p>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end pin varify -->
 
              <!--========================
             |      Cart Part         |
@@ -164,7 +220,7 @@
                     </div>
                 </div>
             </section>
-            <!-- end deposit -->
+            <!-- end cart -->
 
             <!--========================
             |       Calculator Part         |
