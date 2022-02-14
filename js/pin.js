@@ -15,7 +15,7 @@ document.getElementById('press-keybtn').addEventListener('click', function(e) {
             keyInput.value = "";
         }
         if (keyBtn == "x") {
-            keyInput.value = keyInput.value.slice(0, -1);
+            keyInput.value.slice(0, -1);
         }
     } else {
         keyInput.value += keyBtn;
@@ -24,19 +24,23 @@ document.getElementById('press-keybtn').addEventListener('click', function(e) {
 });
 
 // Submit Button
+clickCount = 3;
 document.getElementById('submit-pin').addEventListener('click', function(e) {
     const submitPinBtn = e.target.id;
     const pinNumber = document.getElementById('pin-display').value;
     const typeNumber = document.getElementById('number-input').value;
     const success = document.getElementById('success');
     const error = document.getElementById('error');
-    error.style.display = 'block';
-    if (pinNumber == typeNumber) {
+    if (clickCount < 3 && clickCount > 0) {
+        error.style.display = 'block';
+    }
+
+    if (pinNumber == typeNumber && pinNumber != " ") {
         success.style.display = 'block';
         error.style.display = 'none';
     } else {
-        success.style.display = 'none';
         error.style.display = 'block';
+        success.style.display = 'none';
     }
     // console.log(submitPinBtn);
 });
