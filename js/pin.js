@@ -30,6 +30,7 @@ document.getElementById('submit-pin').addEventListener('click', function(e) {
     const typeNumber = document.getElementById('number-input').value;
     const success = document.getElementById('success');
     const error = document.getElementById('error');
+    error.style.display = 'block';
     if (pinNumber == typeNumber) {
         success.style.display = 'block';
         error.style.display = 'none';
