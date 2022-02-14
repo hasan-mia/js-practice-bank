@@ -105,19 +105,20 @@
                 <div class="lg:text-5xl text-center mb-2">
                     <h1 class="font-semibold">Varify <span class="font-semibold text-purple-600">Pin!!!</h1>
                 </div>
-                <div class="notify-section">
-                    <p class="notify">❌ Pin Didn't Match, Please try again</p>
-                    <p class="notify">✅ Pin Matched... Secret door is opening for you</p>
-                </div>
-                <div class="grid grid-cols-2 px-16 py-2 bg-gray-100 rounded">
-                    <div class="pin-generator half-width mx-2">
-                        <input class="form-control" type="text"><br>
-                        <button class="generate-btn">Generate Pin</button>
+                
+                <div class="grid lg:grid-cols-2 lg:px-16 py-2 bg-gray-100 rounded">
+                    <div class="pin-generator half-width mx-2 md:mt-12">
+                        <input id="pin-display" class="form-control" type="text"><br>
+                        <button id="pin-generator" class="generate-btn">Generate Pin</button>
+                        <div class="notify-section">
+                            <p id="error" class="notify">❌ Pin Didn't Match, Please try again</p>
+                            <p id="success" class="notify">✅ Pin Matched... Secret door is opening for you</p>
+                        </div>
                     </div>
-                    <div class="pin-calculator">
+                    <div class="pin-calculator md:mt-12">
                         <div class="input-section half-width">
-                            <input class="form-control" type="text">
-                            <div class="numbers">
+                            <input id="number-input" class="form-control" type="text">
+                            <div id="press-keybtn" class="numbers">
                                 <div class="calc-body">
                                     <div class="calc-button-row">
                                       <div class="button">7</div>
@@ -140,7 +141,7 @@
                                         <div class="button">C</div>
                                     </div>
                                     <div>
-                                        <button type="submit" class="submit-btn text-xl px-28 py-2 uppercase bg-blue-500 rounded">Submit</button>
+                                        <button id="submit-pin" type="submit" class="submit-btn text-xl px-28 py-2 uppercase bg-blue-500 rounded">Submit</button>
                                         <p class="action-left">3 try left</p>
                                     </div>
                                 </div>  
@@ -158,50 +159,50 @@
                 <div class="lg:text-5xl text-center mb-2">
                     <h1 class="font-semibold">My <span class="font-semibold text-purple-600">CART!!!</h1>
                 </div>
-                <div class="grid gird-cols-1 p-16 bg-gray-100 rounded">
-                    <div class="cart-item my-2 px-8 py-4 border rounded bg-white">
-                        <div class="flex items-center">
-                            <div class="item-img w-2/4 flex items-center justify-start">
+                <div class="grid gird-cols-1 md:p-16 bg-gray-100 rounded">
+                    <div class="cart-item my-2 md:px-8 py-4 border rounded bg-white">
+                        <div class="md:flex md:items-center sm:grid sm:grid-cols-3">
+                            <div class="item-img lg:w-2/4 flex items-center justify-start">
                                 <img src="img/product-1.png" alt="">
                                 <h5 class="text-xl font-semibold">iPhone 11 128GB Black</h5>
                             </div>
 
-                            <div class="w-1/4 flex justify-center ">
+                            <div class="lg:w-1/4 flex justify-center ">
                                 <button class="text-lg font-semibold "><i class="fas fa-minus "></i></button>
                                 <input type="number " min="0 " class="text-center text-2xl font-semibold" value="1 ">
                                 <button class="text-lg font-semibold "><i class="fas fa-plus "></i></button>
                             </div>
-                            <div class="w-1/4 flex justify-center ">
+                            <div class="lg:w-1/4 flex justify-center ">
                                 <h5 class="text-2xl font-semibold">$59</h5>
                             </div>
-                            <div class="w-1/4 flex justify-end ">
+                            <div class="lg:w-1/4 flex justify-center md:justify-end ">
                                 <img src="img/remove.png " alt=" " class="remove-item ">
                             </div>
                         </div>
                     </div>
 
-                    <div class="cart-item my-2 px-8 py-4 border rounded bg-white">
-                        <div class="flex items-center">
-                            <div class="item-img w-2/4 flex items-center justify-start">
+                    <div class="cart-item my-2 md:px-8 py-4 border rounded bg-white">
+                        <div class="md:flex md:items-center sm:grid sm:grid-cols-3">
+                            <div class="item-img lg:w-2/4 flex items-center justify-start">
                                 <img src="img/product-1.png" alt="">
                                 <h5 class="text-xl font-semibold">iPhone 11 128GB Black</h5>
                             </div>
 
-                            <div class="w-1/4 flex justify-center ">
+                            <div class="lg:w-1/4 flex justify-center ">
                                 <button class="text-lg font-semibold "><i class="fas fa-minus "></i></button>
                                 <input type="number " min="0 " class="text-center text-2xl font-semibold" value="1 ">
                                 <button class="text-lg font-semibold "><i class="fas fa-plus "></i></button>
                             </div>
-                            <div class="w-1/4 flex justify-center ">
+                            <div class="lg:w-1/4 flex justify-center ">
                                 <h5 class="text-2xl font-semibold">$59</h5>
                             </div>
-                            <div class="w-1/4 flex justify-end ">
+                            <div class="lg:w-1/4 flex justify-center md:justify-end ">
                                 <img src="img/remove.png " alt=" " class="remove-item ">
                             </div>
                         </div>
                     </div>
 
-                    <div class="cart-item my-2 px-8 py-4 border rounded bg-white">
+                    <div class="cart-item my-2 md:px-8 py-4 border rounded bg-white">
                         <div class="flex justify-between">
                             <div class="text-xl font-semibold">
                                 <h5>Subtotal: </h5>
@@ -215,7 +216,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex justify-end mt-6">
+                    <div class="flex md:justify-center mt-6">
                         <button type="button " class="text-xl text-white bg-green-600 px-6 py-2 rounded">Check Out</button>
                     </div>
                 </div>
@@ -295,6 +296,7 @@
         =========================-->
         <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
         <script src="js/bank.js"></script>
+        <script src="js/pin.js"></script>
         <script src="js/calculator.js"></script>
         <script>
             document.getElementById('logout').addEventListener('click', function() {
