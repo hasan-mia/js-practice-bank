@@ -18,7 +18,7 @@
         <!-- <link rel="stylesheet" href="css/responsive.css"> -->
     </head>
 
-    <body>
+    <body class="mb-28">
         <!--========================
         |       Header Part         |
         =========================-->
@@ -157,143 +157,178 @@
             =========================-->
             <section class="lg:w-4/4 px-14 py-10 mx-auto" id="cart">
                 <div class="lg:text-5xl text-center mb-2">
-                    <h1 class="font-semibold">My <span class="font-semibold text-purple-600">CART!!!</h1>
+                    <h1 class="font-semibold">Product<span class="font-semibold text-purple-600"> Cart </h1>
                 </div>
                 <div class="grid gird-cols-1 md:p-16 bg-gray-100 rounded">
-                    <div class="cart-item my-2 md:px-8 py-4 border rounded bg-white">
-                        <div class="md:flex md:items-center sm:grid sm:grid-cols-3">
-                            <div class="item-img lg:w-2/4 flex items-center justify-start">
-                                <img src="img/product-1.png" alt="">
-                                <h5 class="text-xl font-semibold">iPhone 11 128GB Black</h5>
-                            </div>
+                    <div class="md:flex md:items-center sm:grid sm:grid-cols-3">
+                        <div class="item-img lg:w-2/4 flex items-center justify-start">
+                            <img src="img/product-1.png" alt="">
+                            <h5>iPhone 11 Silicone Phone</h5>
+                        </div>
 
-                            <div class="lg:w-1/4 flex justify-center ">
-                                <button class="text-lg font-semibold "><i class="fas fa-minus "></i></button>
-                                <input type="number " min="0 " class="text-center text-2xl font-semibold" value="1 ">
-                                <button class="text-lg font-semibold "><i class="fas fa-plus "></i></button>
-                            </div>
-                            <div class="lg:w-1/4 flex justify-center ">
-                                <h5 class="text-2xl font-semibold">$59</h5>
-                            </div>
-                            <div class="lg:w-1/4 flex justify-center md:justify-end ">
-                                <img src="img/remove.png " alt=" " class="remove-item ">
+                        <div class="lg:w-1/4 flex md:grid justify-center">
+                            <div class="input-group number-spinner">
+                                <button id="phone-remove" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                                <input id="phone-number" type="number" min="0" class="form-control text-center" value="1">
+                                <button id="phone-add" class="btn btn-default"><i class="fas fa-plus"></i></button>
                             </div>
                         </div>
+                        <div class="lg:w-1/4 flex justify-center">
+                            <h5>$ <span id="phone-price">0</span> </h5>
+                </div>
+
+                <div class="lg:w-1/4 flex justify-center md:justify-end ">
+                    <img src="img/remove.png" alt="" class="remove-item">
+                </div>
+                </div>
+
+                <div class="md:flex md:items-center sm:grid sm:grid-cols-3">
+                    <div class="item-img lg:w-2/4 flex items-center justify-start">
+                        <img src="img/product-2.png" alt="">
+                        <h5>iPhone 11 Silicone Case - Black</h5>
                     </div>
 
-                    <div class="cart-item my-2 md:px-8 py-4 border rounded bg-white">
-                        <div class="md:flex md:items-center sm:grid sm:grid-cols-3">
-                            <div class="item-img lg:w-2/4 flex items-center justify-start">
-                                <img src="img/product-1.png" alt="">
-                                <h5 class="text-xl font-semibold">iPhone 11 128GB Black</h5>
-                            </div>
+                    <div class="lg:w-1/4 flex md:grid justify-center">
+                        <div class="input-group number-spinner">
+                            <button id="case-remove" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                            <input id="case-number" type="number" min="0" class="form-control text-center" value="1">
+                            <button id="case-add" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                        </div>
 
-                            <div class="lg:w-1/4 flex justify-center ">
-                                <button class="text-lg font-semibold "><i class="fas fa-minus "></i></button>
-                                <input type="number " min="0 " class="text-center text-2xl font-semibold" value="1 ">
-                                <button class="text-lg font-semibold "><i class="fas fa-plus "></i></button>
-                            </div>
-                            <div class="lg:w-1/4 flex justify-center ">
-                                <h5 class="text-2xl font-semibold">$59</h5>
-                            </div>
-                            <div class="lg:w-1/4 flex justify-center md:justify-end ">
-                                <img src="img/remove.png " alt=" " class="remove-item ">
-                            </div>
+                    </div>
+                    <div class="lg:w-1/4 flex justify-center">
+                        <h5>$ <span id="case-price">0</span> </h5>
+                    </div>
+
+                    <div class="lg:w-1/4 flex justify-center md:justify-end ">
+                        <img src="img/remove.png" alt="" class="remove-item">
+                    </div>
+                </div>
+
+                <div class="cart-item my-2 md:px-8 py-4 border rounded bg-white">
+                    <div class="flex justify-between">
+                        <div class="text-xl font-semibold">
+                            <h5>Subtotal: </h5>
+                            <h5>Tax:</h5>
+                            <h5>Total:</h5>
+                        </div>
+                        <div class="text-xl font-semibold">
+                            <h5>$ <span id="sub-total">0</span> </h5>
+                            <h5>$ <span id="tax">0</span></h5>
+                            <h5>$ <span id="total">0</span> </h5>
                         </div>
                     </div>
-
-                    <div class="cart-item my-2 md:px-8 py-4 border rounded bg-white">
-                        <div class="flex justify-between">
-                            <div class="text-xl font-semibold">
-                                <h5>Subtotal: </h5>
-                                <h5>Tax:</h5>
-                                <h5>Total:</h5>
-                            </div>
-                            <div class="text-xl font-semibold">
-                                <h5>$1,278</h5>
-                                <h5>$0</h5>
-                                <h5>$1,278</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex md:justify-center mt-6">
-                        <button type="button " class="text-xl text-white bg-green-600 px-6 py-2 rounded">Check Out</button>
-                    </div>
+                </div>
+                <div class="flex sm:justify-center lg:justify-end mt-6">
+                    <button type="button " class="text-xl text-white bg-green-600 px-6 py-2 rounded">Check Out</button>
+                </div>
                 </div>
             </section>
             <!-- end cart -->
 
+
             <!--========================
-            |       Calculator Part         |
+            |       Calculator Part     |
+            =========================-->
+            <section class="lg:w-3/4 mx-auto my-0" id="calculator">
+                <div class="flex justify-center my-2 py-4">
+                    <h1 class="tex-center px-4 font-semibold bg-purple-100 text-3xl w-100">Tailwind Scientific</h1>
+                </div>
+                <div class="calculator mx-auto p-4 lg:w-2/4 bg-indigo-500 border rounded">
+                    <div class="p-12 w-100 mb-2 border bg-gray-300 text-right p-2 rounded">
+                        <input type="text" id="number" class="bg-gray-300 text-2xl text-right px-2 pt-2"><br>
+                        <input type="text" id="result" class="bg-gray-300 text-xl text-right px-2">
+                    </div>
+                    <div class="grid grid-cols-4 gap-2">
+                        <button id="sin" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('Math.sin(')"> sin</button>
+                        <button id="cos" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('Math.cos(')">cos</button>
+                        <button id="tan" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('Math.tan(')">tan</button>
+                        <button id="sininvers" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('Math.sinh(')">sin<sup>-1</sup></button>
+                        <button id="cosinvers" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('Math.cosh(')">cos<sup>-1</sup></button>
+                        <button id="taninvers" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('Math.tanh(')">tan<sup>-1</sup></button>
+                        <button id="deg" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('(Math.PI / 180) /')">deg</button>
+                        <button id="rad" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('(Math.PI / 180) *')">rad</button>
+                        <button id="ln" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('Math.LN2')">ln</button>
+                        <button id="log" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('Math.log(')">log</button>
+                        <button id="square" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result(Math.pow(x, 2))">X<sup>2</sup></button>
+                        <button id="cube" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result(Math.pow(x, 3))">X<sup>3</sup></button>
+                        <button id="rootsquare" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result(Math.SQRT1_2)"><i class="fal fa-square-root-alt"></i></button>
+                        <button id="rootcube" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result(Math.SQRT1_2)"><sup>3</sup><i class="fal fa-square-root">x</i></button>
+                        <button id="pi" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('Math.PI')"><i class="fal fa-pi"></i></button>
+                        <button id="euler" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="clean()"><i class="bi bi-backspace-reverse-fill"></i></button>
+                        <button id="backetleft" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('(')">(</button>
+                        <button id="bracketright" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result(')')">)</button>
+
+                        <button id="plus" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('+')">+</button>
+                        <button id="minus" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('-')">-</button>
+                        <button id="multi" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('*')"><i class="bi bi-x-lg"></i></button>
+                        <button id="divi" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('/')"><i class="fal fa-divide"></i></button>
+                        <button id="modulas" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('%')">%</button>
+                        <button id="nine" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('9')">9</button>
+                        <button id="eight" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('8')">8</button>
+                        <button id="seven" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('7')">7</button>
+                        <button id="six" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('6')">6</button>
+                        <button id="five" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('5')">5</button>
+                        <button id="four" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('4')">4</button>
+                        <button id="three" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('3')">3</button>
+                        <button id="two" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('2')">2</button>
+                        <button id="one" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('1')">1</button>
+                        <button id="clear" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="erase()"><i class="fal fa-eraser"></i></button>
+                        <button id="zero" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('0')">0</button>
+                        <button id="dot" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="result('.')">.</button>
+                        <button id="equal" class="calc-btn border bg-gray-300 active:bg-gray-200 rounded text-xl m-2 text-semibold" onclick="equal()">=</button>
+
+                    </div>
+                </div>
+                <!-- end grid -->
+            </section>
+            <!-- end calculator -->
+
+            <!--========================
+            |      Post with inner HTML Part          |
             =========================-->
             <section class="lg:w-4/4 px-14 py-10 mx-auto" id="cart">
                 <div class="lg:text-5xl text-center mb-2">
-                    <h1 class="font-semibold">My <span class="font-semibold text-purple-600">CART!!!</h1>
+                    <h1 class="font-semibold">Adding Post <span class="font-semibold text-purple-600">with Inner Html </h1>
                 </div>
                 <div class="grid gird-cols-1 md:p-16 bg-gray-100 rounded">
-                    <div class="cart-item my-2 md:px-8 py-4 border rounded bg-white">
-                        <div class="md:flex md:items-center sm:grid sm:grid-cols-3">
-                            <div class="item-img lg:w-2/4 flex items-center justify-start">
-                                <img src="img/product-1.png" alt="">
-                                <h5 class="text-xl font-semibold">iPhone 11 128GB Black</h5>
-                            </div>
-
-                            <div class="lg:w-1/4 flex justify-center ">
-                                <button class="text-lg font-semibold "><i class="fas fa-minus "></i></button>
-                                <input type="number " min="0 " class="text-center text-2xl font-semibold" value="1 ">
-                                <button class="text-lg font-semibold "><i class="fas fa-plus "></i></button>
-                            </div>
-                            <div class="lg:w-1/4 flex justify-center ">
-                                <h5 class="text-2xl font-semibold">$59</h5>
-                            </div>
-                            <div class="lg:w-1/4 flex justify-center md:justify-end ">
-                                <img src="img/remove.png " alt=" " class="remove-item ">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cart-item my-2 md:px-8 py-4 border rounded bg-white">
-                        <div class="md:flex md:items-center sm:grid sm:grid-cols-3">
-                            <div class="item-img lg:w-2/4 flex items-center justify-start">
-                                <img src="img/product-1.png" alt="">
-                                <h5 class="text-xl font-semibold">iPhone 11 128GB Black</h5>
-                            </div>
-
-                            <div class="lg:w-1/4 flex justify-center ">
-                                <button class="text-lg font-semibold "><i class="fas fa-minus "></i></button>
-                                <input type="number " min="0 " class="text-center text-2xl font-semibold" value="1 ">
-                                <button class="text-lg font-semibold "><i class="fas fa-plus "></i></button>
-                            </div>
-                            <div class="lg:w-1/4 flex justify-center ">
-                                <h5 class="text-2xl font-semibold">$59</h5>
-                            </div>
-                            <div class="lg:w-1/4 flex justify-center md:justify-end ">
-                                <img src="img/remove.png " alt=" " class="remove-item ">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cart-item my-2 md:px-8 py-4 border rounded bg-white">
+                        <input id="post-title" type="text" class="p-2" placeholder="Enter title"><br>
+                        <textarea id="post-description" type="text" rows="5" class="w-100 mt-2 form-inline p-2" placeholder="Description"></textarea>
                         <div class="flex justify-between">
-                            <div class="text-xl font-semibold">
-                                <h5>Subtotal: </h5>
-                                <h5>Tax:</h5>
-                                <h5>Total:</h5>
-                            </div>
-                            <div class="text-xl font-semibold">
-                                <h5>$1,278</h5>
-                                <h5>$0</h5>
-                                <h5>$1,278</h5>
-                            </div>
+                            <button id="post-btn" class="px-4 py-2 border bg-green-500 text-white w-1/4 ">Post</button>
+                        <button id="post-delete" class="px-4 py-2 border bg-red-500 text-white w-1/4" disabled>Clear</button>
+
                         </div>
-                    </div>
-                    <div class="flex justify-start md:justify-end mt-6">
-                        <button type="button " class="text-xl text-white bg-green-600 px-6 py-2 rounded">Check Out</button>
-                    </div>
+                        <div id="post-container" class="border bg-gradient p-1">
+                            <!-- All Post List -->
+                        </div> 
                 </div>
+                <!-- first iteam -->
             </section>
-            <!-- end calculator -->
-            
+            <!-- end post -->
+
+             <!--========================
+            |     Count Value         |
+            =========================-->
+            <section class="lg:w-4/4 px-14 py-10 mx-auto" id="cart">
+                <div class="lg:text-5xl text-center mb-2">
+                    <h1 class="font-semibold">Count Number <span class="font-semibold text-purple-600">with Limitation </h1>
+                </div>
+                <div class="grid gird-cols-1 md:p-16 bg-gray-100 rounded">
+                        <input id="count-number" type="text" class="p-2"><br>
+                        <div class="flex justify-between">
+                            <button id="add-count-btn" class="px-4 py-2 border bg-green-600 text-white w-1/4">Plus</button>
+                        <button id="sub-count-btn" class="px-4 py-2 border bg-red-600 text-white w-1/4">Minus</button>
+
+                        </div>
+                        <div id="post-container" class="border bg-gradient p-1">
+                            <!-- All Post List -->
+                        </div> 
+                </div>
+                <!-- first iteam -->
+            </section>
+            <!-- end count value -->
+
         </main>
         <!-- end main -->
 
@@ -310,8 +345,12 @@
         =========================-->
         <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
         <script src="js/bank.js"></script>
+        <script src="js/bank.js"></script>
         <script src="js/pin.js"></script>
         <script src="js/calculator.js"></script>
+        <script src="js/cart.js"></script>
+        <script src="js/app.js"></script>
+        <!-- <script src="js/app.js"></script> -->
         <script>
             document.getElementById('logout').addEventListener('click', function() {
                 window.location.href = 'index.html'

@@ -57,71 +57,74 @@
             =========================-->
             <section class="lg:w-4/4 px-14 py-10 mx-auto" id="cart">
                 <div class="lg:text-5xl text-center mb-2">
-                    <h1 class="font-semibold">My <span class="font-semibold text-purple-600">CART!!!</h1>
+                    <h1 class="font-semibold">Product<span class="font-semibold text-purple-600"> Cart </h1>
                 </div>
                 <div class="grid gird-cols-1 md:p-16 bg-gray-100 rounded">
-                    <div class="cart-item my-2 md:px-8 py-4 border rounded bg-white">
-                        <div class="md:flex md:items-center sm:grid sm:grid-cols-3">
-                            <div class="item-img lg:w-2/4 flex items-center justify-start">
-                                <img src="img/product-1.png" alt="">
-                                <h5 class="text-xl font-semibold">iPhone 11 128GB Black</h5>
-                            </div>
+                    <div class="md:flex md:items-center sm:grid sm:grid-cols-3">
+                        <div class="item-img lg:w-2/4 flex items-center justify-start">
+                            <img src="img/product-1.png" alt="">
+                            <h5>iPhone 11 Silicone Phone</h5>
+                        </div>
 
-                            <div class="lg:w-1/4 flex justify-center ">
-                                <button class="text-lg font-semibold "><i class="fas fa-minus "></i></button>
-                                <input type="number " min="0 " class="text-center text-2xl font-semibold" value="1 ">
-                                <button class="text-lg font-semibold "><i class="fas fa-plus "></i></button>
-                            </div>
-                            <div class="lg:w-1/4 flex justify-center ">
-                                <h5 class="text-2xl font-semibold">$59</h5>
-                            </div>
-                            <div class="lg:w-1/4 flex justify-center md:justify-end ">
-                                <img src="img/remove.png " alt=" " class="remove-item ">
+                        <div class="lg:w-1/4 flex md:grid justify-center">
+                            <div class="input-group number-spinner">
+                                <button id="phone-remove" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                                <input id="phone-number" type="number" min="0" class="form-control text-center" value="1">
+                                <button id="phone-add" class="btn btn-default"><i class="fas fa-plus"></i></button>
                             </div>
                         </div>
+                        <div class="lg:w-1/4 flex justify-center">
+                            <h5>$ <span id="phone-price">0</span> </h5>
+                </div>
+
+                <div class="lg:w-1/4 flex justify-center md:justify-end ">
+                    <img src="img/remove.png" alt="" class="remove-item">
+                </div>
+                </div>
+
+                <div class="md:flex md:items-center sm:grid sm:grid-cols-3">
+                    <div class="item-img lg:w-2/4 flex items-center justify-start">
+                        <img src="img/product-2.png" alt="">
+                        <h5>iPhone 11 Silicone Case - Black</h5>
                     </div>
 
-                    <div class="cart-item my-2 md:px-8 py-4 border rounded bg-white">
-                        <div class="md:flex md:items-center sm:grid sm:grid-cols-3">
-                            <div class="item-img lg:w-2/4 flex items-center justify-start">
-                                <img src="img/product-1.png" alt="">
-                                <h5 class="text-xl font-semibold">iPhone 11 128GB Black</h5>
-                            </div>
-
-                            <div class="lg:w-1/4 flex justify-center ">
-                                <button class="text-lg font-semibold "><i class="fas fa-minus "></i></button>
-                                <input type="number " min="0 " class="text-center text-2xl font-semibold" value="1 ">
-                                <button class="text-lg font-semibold "><i class="fas fa-plus "></i></button>
-                            </div>
-                            <div class="lg:w-1/4 flex justify-center ">
-                                <h5 class="text-2xl font-semibold">$59</h5>
-                            </div>
-                            <div class="lg:w-1/4 flex justify-center md:justify-end ">
-                                <img src="img/remove.png " alt=" " class="remove-item ">
-                            </div>
+                    <div class="lg:w-1/4 flex md:grid justify-center">
+                        <div class="input-group number-spinner">
+                            <button id="case-remove" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                            <input id="case-number" type="number" min="0" class="form-control text-center" value="1">
+                            <button id="case-add" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
+
+                    </div>
+                    <div class="lg:w-1/4 flex justify-center">
+                        <h5>$ <span id="case-price">0</span> </h5>
                     </div>
 
-                    <div class="cart-item my-2 md:px-8 py-4 border rounded bg-white">
-                        <div class="flex justify-between">
-                            <div class="text-xl font-semibold">
-                                <h5>Subtotal: </h5>
-                                <h5>Tax:</h5>
-                                <h5>Total:</h5>
-                            </div>
-                            <div class="text-xl font-semibold">
-                                <h5>$1,278</h5>
-                                <h5>$0</h5>
-                                <h5>$1,278</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex justify-start md:justify-end mt-6">
-                        <button type="button " class="text-xl text-white bg-green-600 px-6 py-2 rounded">Check Out</button>
+                    <div class="lg:w-1/4 flex justify-center md:justify-end ">
+                        <img src="img/remove.png" alt="" class="remove-item">
                     </div>
                 </div>
+
+                <div class="cart-item my-2 md:px-8 py-4 border rounded bg-white">
+                    <div class="flex justify-between">
+                        <div class="text-xl font-semibold">
+                            <h5>Subtotal: </h5>
+                            <h5>Tax:</h5>
+                            <h5>Total:</h5>
+                        </div>
+                        <div class="text-xl font-semibold">
+                            <h5>$ <span id="sub-total">0</span> </h5>
+                            <h5>$ <span id="tax">0</span></h5>
+                            <h5>$ <span id="total">0</span> </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex sm:justify-center lg:justify-end mt-6">
+                    <button type="button " class="text-xl text-white bg-green-600 px-6 py-2 rounded">Check Out</button>
+                </div>
+                </div>
             </section>
-            <!-- end deposit -->
+            <!-- end cart -->
 
         </main>
         <!-- end main -->
@@ -138,7 +141,7 @@
         |      All Javascript      |
         =========================-->
         <!-- <script src="js/jquery-3.6.0.min.js "></script> -->
-        <script src="js/cart.js "></script>
+        <script type="text/javascript" src="js/cart.js"></script>
         <script>
             document.getElementById('logout').addEventListener('click', function() {
                 window.location.href = 'index.html'

@@ -35,7 +35,7 @@ function totalMoney(total, withdrawInput) {
     }
 }
 
-// // ===============Deposit without function=============
+
 document.getElementById('deposit-button').addEventListener('click', function() {
     const depositAmmount = inputMoney('deposit-input');
     const errorMessage = document.getElementById('error');
@@ -63,7 +63,6 @@ document.getElementById('withdraw-button').addEventListener('click', function() 
     }
 
 })
-
 
 
 // // // ===============Deposit without function=============

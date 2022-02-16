@@ -2,8 +2,8 @@
 const allButton = document.getElementsByClassName('btn')
 for (const button of allButton) {
     button.addEventListener('click', function(e) {
-        // get button id
         const btnId = e.target.id;
+        // console.log(btnId)
         if (btnId == 'default') {
             document.body.style.background = "white";
         } else if (btnId == 'red') {

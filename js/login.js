@@ -14,5 +14,5 @@ document.getElementById('login').addEventListener('click', function() {
 });
 
 document.getElementById('logout').addEventListener('click', function() {
-    window.location.href = 'index.html'
-})
+    window.location.href = 'index.html';
+});
